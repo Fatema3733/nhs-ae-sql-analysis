@@ -172,6 +172,7 @@ parent_org TEXT,
 region_group TEXT
 );
 
+TRUNCATE TABLE region_reference;
 
 -- Insert NHS England regional mappings
 INSERT INTO region_reference (parent_org, region_group)
@@ -183,7 +184,6 @@ VALUES
 ('NHS ENGLAND NORTH WEST', 'North West'),
 ('NHS ENGLAND SOUTH EAST', 'South East'),
 ('NHS ENGLAND SOUTH WEST', 'South West');
-
 
 -- Check reference table
 SELECT *
