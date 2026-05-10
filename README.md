@@ -1,4 +1,4 @@
-# NHS A&E Performance Analysis Using SQL
+# NHS A&E Performance Analysis
 
 ## Project Overview
 This project explores NHS A&E performance data using SQL to analyse attendance trends, waiting-time pressures, and regional operational performance across NHS England trusts.
