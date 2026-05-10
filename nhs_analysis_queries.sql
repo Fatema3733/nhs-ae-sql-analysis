@@ -226,3 +226,21 @@ GROUP BY `Org name`
 )
 ORDER BY total_over_4hrs DESC
 LIMIT 10;
+
+
+-- ============================================================
+-- 8. WINDOW FUNCTION ANALYSIS
+-- ============================================================
+
+-- Rank NHS trusts by total 4-hour waiting time breaches
+SELECT
+`Org name`,
+SUM(`Total Over 4hrs`) AS total_over_4hrs,
+RANK() OVER (
+ORDER BY SUM(`Total Over 4hrs`) DESC
+) AS pressure_rank
+FROM nhs_cleaned
+WHERE LOWER(TRIM(Period)) <> 'total'
+GROUP BY `Org name`
+LIMIT 10;
+
