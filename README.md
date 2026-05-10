@@ -50,6 +50,7 @@ The dataset contains NHS A&E attendance and emergency admissions data for 2024â€
 - HAVING clauses
 - CASE statements
 - Derived tables
+- Window Functions
 
 ---
 
